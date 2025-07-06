@@ -16,10 +16,14 @@ const userSchema = new mongoose.Schema(
       required: true,
       minlenght: 6,
     },
-    email: {
+    profilePic: {
       type: String,
       default: "",
     },
   },
   { timestamps: true }
 );
+
+const User = mongoose.model("User", userSchema);
+
+export default User;
